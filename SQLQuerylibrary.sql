@@ -26,20 +26,6 @@ CREATE TABLE BOOKS(
 
 )
 
-GO
-
-CREATE TABLE A_BOOK(
-	ID_Abook	INT PRIMARY KEY,
-	ID_Book		INT not null,
-	Pos_shelf	varchar(10),
-	Pos_row		char(10),
-	Pos_column	char(10),
-	Current_status_B char(10),
-	Check_borrow bit not null default 1,
-	foreign key(ID_Book) References BOOKS(ID_Book)
-	ON UPDATE CASCADE
-	ON DELETE SET NULL
-)
 
 GO 
 
